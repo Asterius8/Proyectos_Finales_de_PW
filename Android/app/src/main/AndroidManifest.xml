@@ -23,6 +23,7 @@
         </activity>
 
         <activity android:name=".ActivityHubTutor"></activity>
+        <activity android:name=".ActivityAltas"></activity>
 
     </application>
 
