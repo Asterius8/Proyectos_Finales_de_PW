@@ -28,4 +28,10 @@ public class ActivityHubTutor extends AppCompatActivity {
 
     }
 
+    public void abrirCambios(View v){//Metodo para abrir la ActivityAltas
+
+        Intent i = new Intent(this, ActivityCambios.class);
+        startActivity(i);
+
+    }
 }
