@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-17dp"
+            tools:layout_editor_absoluteY="107dp">
+
+            <EditText
+                android:id="@+id/largeTextArea_m"
+                android:layout_width="382dp"
+                android:layout_height="300dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:hint="Escribe observaciones aquí"
+                android:inputType="textMultiLine"
+                android:lines="10"
+                android:overScrollMode="ifContentScrolls"
+                android:padding="16dp"
+                android:scrollbars="vertical"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_duracion_tutoria_m" />
+
+            <TextView
+                android:id="@+id/lbl_modificar_reporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Modificar Reporte"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_instrucciones_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="36dp"
+                android:text="Seleccione dando click que registro desea editar."
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_modificar_reporte" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_reportes"
+                android:layout_width="392dp"
+                android:layout_height="195dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_m" />
+
+            <EditText
+                android:id="@+id/txt_fecha_tutoria_m"
+                android:layout_width="382dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:hint="Fecha de Turoria"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lista_reportes" />
+
+            <EditText
+                android:id="@+id/txt_duracion_tutoria_m"
+                android:layout_width="382dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="18dp"
+                android:ems="10"
+                android:hint="Duracion de Tutoria"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_fecha_tutoria_m" />
+
+            <Button
+                android:id="@+id/btn_modificar_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="73dp"
+                android:text="Modificar"
+                app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_m2"
+                app:layout_constraintTop_toBottomOf="@+id/largeTextArea_m" />
+
+            <Button
+                android:id="@+id/btn_cancelar_m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="75dp"
+                android:text="Cancelar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/largeTextArea_m" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
