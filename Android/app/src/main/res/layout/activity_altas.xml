@@ -1,6 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="52dp"
+                android:text="Cancelar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_carrera" />
+
+            <Button
+                android:id="@+id/btn_registrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="76dp"
+                android:text="Registrar"
+                app:layout_constraintEnd_toStartOf="@+id/btn_cancelar"
+                app:layout_constraintTop_toBottomOf="@+id/spn_carrera" />
+
+            <TextView
+                android:id="@+id/lbl_altas_alumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Registrar Alumno"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_instrucciones_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                android:text="Ingrese los datos del alumno que desea registar:"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_altas_alumno" />
+
+            <EditText
+                android:id="@+id/txt_num_control"
+                android:layout_width="347dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:hint="Numero de Control"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_a" />
+
+            <EditText
+                android:id="@+id/txt_nombre"
+                android:layout_width="347dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="112dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_a" />
+
+            <EditText
+                android:id="@+id/txt_paterno"
+                android:layout_width="347dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Apellido Paterno"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+            <EditText
+                android:id="@+id/txt_materno"
+                android:layout_width="347dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:hint="Apellido Materno"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_paterno" />
+
+            <EditText
+                android:id="@+id/txt_fecha_nac"
+                android:layout_width="341dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:hint="Fecha de nacimiento(aaaa-mm-dd) "
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_materno" />
+
+            <EditText
+                android:id="@+id/txt_num_telefono"
+                android:layout_width="343dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:hint="Numero de telefono"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_fecha_nac" />
+
+            <Spinner
+                android:id="@+id/spn_semestre"
+                android:layout_width="343dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num_telefono" />
+
+            <Spinner
+                android:id="@+id/spn_carrera"
+                android:layout_width="342dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_semestre" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

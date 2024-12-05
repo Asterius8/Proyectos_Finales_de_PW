@@ -24,6 +24,7 @@
 
         <activity android:name=".ActivityHubTutor"></activity>
         <activity android:name=".ActivityAltas"></activity>
+        <activity android:name=".ActivityBajas"></activity>
 
     </application>
 

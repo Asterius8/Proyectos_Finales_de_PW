@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lbl_bajas_alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Eliminar Alumno"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_intrucciones_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:text="Ingrese el numero de control del alumno\nque desea eliminar: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_bajas_alumno" />
+
+    <EditText
+        android:id="@+id/txt_num_control_b"
+        android:layout_width="358dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="Numero de Control"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_intrucciones_b" />
+
+    <Button
+        android:id="@+id/btn_limpiar_b"
+        android:layout_width="129dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="19dp"
+        android:text="Limpiar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_b"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num_control_b" />
+
+    <Button
+        android:id="@+id/btn_cancelar_b"
+        android:layout_width="129dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="59dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num_control_b" />
+
+    <Button
+        android:id="@+id/btn_eliminar_b"
+        android:layout_width="278dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="58dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_limpiar_b" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_alumnos"
+        android:layout_width="394dp"
+        android:layout_height="374dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar_b" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

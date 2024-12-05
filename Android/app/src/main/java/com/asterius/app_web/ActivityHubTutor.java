@@ -21,4 +21,11 @@ public class ActivityHubTutor extends AppCompatActivity {
 
     }
 
+    public void abrirBajas(View v){//Metodo para abrir la ActivityAltas
+
+        Intent i = new Intent(this, ActivityBajas.class);
+        startActivity(i);
+
+    }
+
 }
