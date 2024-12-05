@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_consultas_alumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="84dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Buscar Alumno"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_instrucciones_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="63dp"
+                android:text="Seleccione el campo por el que desea buscar: "
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_consultas_alumno" />
+
+            <RadioButton
+                android:id="@+id/rbn_num_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="376dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_b" />
+
+            <RadioButton
+                android:id="@+id/rbn_mostrar_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="304dp"
+                android:text="Mostar todos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_b" />
+
+            <RadioButton
+                android:id="@+id/rbn_paterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_paterno_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_nombre" />
+
+            <RadioButton
+                android:id="@+id/rbn_materno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_materno_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_paterno" />
+
+            <RadioButton
+                android:id="@+id/rbn_fecha_nac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="7dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_fecha_nac_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_materno" />
+
+            <RadioButton
+                android:id="@+id/rbn_edad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_edad_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_fecha_nac" />
+
+            <RadioButton
+                android:id="@+id/rbn_num_telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_num_telefono_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_edad" />
+
+            <RadioButton
+                android:id="@+id/rbn_semestre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="11dp"
+                app:layout_constraintEnd_toStartOf="@+id/spn_semestre_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_num_telefono" />
+
+            <RadioButton
+                android:id="@+id/rbn_carrera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/spn_carrera_u"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_semestre" />
+
+            <RadioButton
+                android:id="@+id/rbn_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="376dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_num_control" />
+
+            <EditText
+                android:id="@+id/txt_num_control_u"
+                android:layout_width="339dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="37dp"
+                android:ems="10"
+                android:hint="Numero de Control"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_mostrar_todo" />
+
+            <EditText
+                android:id="@+id/txt_edad_u"
+                android:layout_width="327dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="304dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_mostrar_todo" />
+
+            <EditText
+                android:id="@+id/txt_num_telefono_u"
+                android:layout_width="329dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="368dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Numero de Telefono"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbn_mostrar_todo" />
+
+            <EditText
+                android:id="@+id/txt_nombre_u"
+                android:layout_width="333dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num_control_u" />
+
+            <EditText
+                android:id="@+id/txt_paterno_u"
+                android:layout_width="333dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Apellido Paterno"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num_control_u" />
+
+            <EditText
+                android:id="@+id/txt_materno_u"
+                android:layout_width="333dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Apellido Materno"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num_control_u" />
+
+            <EditText
+                android:id="@+id/txt_fecha_nac_u"
+                android:layout_width="328dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="41dp"
+                android:ems="10"
+                android:hint="Fecha de nacimiento(aaaa-mm-dd) "
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_materno_u" />
+
+            <Spinner
+                android:id="@+id/spn_semestre_u"
+                android:layout_width="328dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="37dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_num_telefono_u" />
+
+            <Spinner
+                android:id="@+id/spn_carrera_u"
+                android:layout_width="328dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="37dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_semestre_u" />
+
+            <Button
+                android:id="@+id/btn_cancelar_u"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="108dp"
+                android:text="Cancelar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_carrera_u" />
+
+            <Button
+                android:id="@+id/btn_buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="53dp"
+                android:text="Buscar"
+                app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_u"
+                app:layout_constraintTop_toBottomOf="@+id/spn_carrera_u" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_alumnos"
+                android:layout_width="453dp"
+                android:layout_height="395dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_cancelar_u" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

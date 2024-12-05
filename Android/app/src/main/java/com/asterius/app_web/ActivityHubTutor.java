@@ -34,4 +34,11 @@ public class ActivityHubTutor extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public void abrirConsultas(View v){//Metodo para abrir la ActivityAltas
+
+        Intent i = new Intent(this, ActivityConsultas.class);
+        startActivity(i);
+
+    }
 }
