@@ -41,7 +41,7 @@
         android:id="@+id/btn_consultas_hub"
         android:layout_width="183dp"
         android:layout_height="62dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="104dp"
         android:onClick="abrirConsultas"
         android:text="Buscar Alumno"
@@ -49,10 +49,43 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_cambios_hub" />
 
     <Button
+        android:id="@+id/btn_altas_reporte"
+        android:layout_width="183dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="104dp"
+        android:onClick="abrirAltasReporte"
+        android:text="Crear Reporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_consultas_hub" />
+
+    <Button
+        android:id="@+id/btn_cambios_reporte"
+        android:layout_width="183dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="104dp"
+        android:onClick="abrirConsultas"
+        android:text="Editar Reporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_altas_reporte" />
+
+    <Button
+        android:id="@+id/btn_consultas_reporte"
+        android:layout_width="183dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="104dp"
+        android:onClick="abrirConsultas"
+        android:text="Consultar Reporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cambios_reporte" />
+
+    <Button
         android:id="@+id/btn_cambios_hub"
         android:layout_width="183dp"
         android:layout_height="62dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="104dp"
         android:onClick="abrirCambios"
         android:text="Modificar Alumno"
@@ -63,7 +96,7 @@
         android:id="@+id/btn_bajas_hub"
         android:layout_width="183dp"
         android:layout_height="62dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="104dp"
         android:onClick="abrirBajas"
         android:text="Eliminar Alumno"
@@ -74,10 +107,10 @@
         android:id="@+id/btn_cancelar"
         android:layout_width="199dp"
         android:layout_height="58dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="264dp"
         android:layout_marginEnd="96dp"
-        android:text="Cancelar"
         android:backgroundTint="@color/red"
+        android:text="Cancelar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_consultas_hub" />
 </androidx.constraintlayout.widget.ConstraintLayout>

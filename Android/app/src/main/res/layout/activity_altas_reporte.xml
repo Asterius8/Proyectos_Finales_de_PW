@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lbl_titulo_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Crear Reporte"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_instrucciones_r_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="253dp"
+        android:text="Ingrese los datos:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_titulo_a" />
+
+    <EditText
+        android:id="@+id/txt_num_control_a"
+        android:layout_width="359dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="Numero de control del estudiante"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_instrucciones_r_a" />
+
+    <EditText
+        android:id="@+id/txt_id_docente_a"
+        android:layout_width="354dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:hint="Id_docente"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num_control_a" />
+
+    <EditText
+        android:id="@+id/largeTextArea_a"
+        android:layout_width="359dp"
+        android:layout_height="255dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="23dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:hint="Escribe observaciones aquí"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_duracion_tutoria_a" />
+
+    <EditText
+        android:id="@+id/txt_duracion_tutoria_a"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:hint="Duracion de Tutoria"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha_tutoria_a" />
+
+    <EditText
+        android:id="@+id/fecha_tutoria_a"
+        android:layout_width="354dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:hint="Fecha de Tutoria"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_docente_a" />
+
+    <Button
+        android:id="@+id/btn_crear_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="88dp"
+        android:text="Crear"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_a"
+        app:layout_constraintTop_toBottomOf="@+id/largeTextArea_a" />
+
+    <Button
+        android:id="@+id/btn_cancelar_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/largeTextArea_a" />
+</androidx.constraintlayout.widget.ConstraintLayout>
