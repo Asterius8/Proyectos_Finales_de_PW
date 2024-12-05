@@ -76,7 +76,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="104dp"
-        android:onClick="abrirConsultas"
+        android:onClick="abrirConsultarReporte"
         android:text="Consultar Reporte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_cambios_reporte" />
