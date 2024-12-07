@@ -28,19 +28,19 @@ public class AnalizadorJSON {
     public JSONObject peticionHTTP(String direccionURL, String metodo, ArrayList<String> datos){
 
         //--------- PETICION ALTAS enviar al servidor (request)----------------
-        //Ejemplo de Cadena JSON -->   {"num_control":"01", "nombre_alumno": "Luke", "paterno":"Sky", "materno":"walker","fecha_nac":"1992-10-21","e":"50"...}
+        //Ejemplo de Cadena JSON -->   {"nc":"01", "n": "Luke", "pa":"Sky", "sa":"walker","fn":"1992-10-21","e":"50", "nt":"4991003247","s":"9", "c":"ISC"}
 
         //Formamos la cadena que mandaremos al servidor a travez de JSON
         String cadenaJSON = "{ " +
-                "\"num_control\":\"" + datos.get(0) +
-                "\", \"nombre_alumno\":\"" + datos.get(1) +
-                "\", \"paterno\":\"" + datos.get(2) +
-                "\", \"materno\":\"" + datos.get(3) +
-                "\", \"fecha_nac\":\"" + datos.get(4) +
-                "\", \"edad\":\"" + datos.get(5) +
-                "\", \"num_telefono\":\"" + datos.get(6) +
-                "\", \"semestre\":\"" + datos.get(7) +
-                "\", \"carrera\":\"" + datos.get(8) +
+                "\"nc\":\"" + datos.get(0) +
+                "\", \"n\":\"" + datos.get(1) +
+                "\", \"pa\":\"" + datos.get(2) +
+                "\", \"sa\":\"" + datos.get(3) +
+                "\", \"fn\":\"" + datos.get(4) +
+                "\", \"e\":\"" + datos.get(5) +
+                "\", \"nt\":\"" + datos.get(6) +
+                "\", \"s\":\"" + datos.get(7) +
+                "\", \"c\":\"" + datos.get(8) +
                 "\"}";
 
         try {

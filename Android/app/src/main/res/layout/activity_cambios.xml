@@ -31,18 +31,30 @@
                 android:id="@+id/lbl_intrucciones_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="56dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="64dp"
                 android:text="Dezplace hasta abajo para que seleccione\n un registro de estudiante que modificar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_cambios_alumno" />
 
             <EditText
+                android:id="@+id/txt_num_control_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="88dp"
+                android:ems="10"
+                android:hint="Numero de Control"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_intrucciones_m" />
+
+            <EditText
                 android:id="@+id/txt_nombre_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="77dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="84dp"
                 android:ems="10"
                 android:hint="Nombre"
                 android:inputType="text"
@@ -53,8 +65,8 @@
                 android:id="@+id/txt_paterno_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="77dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="84dp"
                 android:ems="10"
                 android:hint="Apellido Paterno"
                 android:inputType="text"
@@ -65,8 +77,8 @@
                 android:id="@+id/txt_materno_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="77dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="84dp"
                 android:ems="10"
                 android:hint="Apellido Materno"
                 android:inputType="text"
@@ -74,35 +86,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_paterno_m" />
 
             <EditText
-                android:id="@+id/txt_num_control_m"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="84dp"
-                android:ems="10"
-                android:hint="Numero de Control"
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lbl_intrucciones_m" />
-
-            <EditText
-                android:id="@+id/txt_edad_m"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="77dp"
-                android:ems="10"
-                android:hint="edad"
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_fecha_nac_m" />
-
-            <EditText
                 android:id="@+id/txt_fecha_nac_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="77dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="84dp"
                 android:ems="10"
                 android:hint="Fecha de nacimiento(aaaa-mm-dd) "
                 android:inputType="date"
@@ -113,8 +101,8 @@
                 android:id="@+id/txt_num_telefono_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="77dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="84dp"
                 android:ems="10"
                 android:hint="Numero de Telefono"
                 android:inputType="number"
@@ -125,8 +113,8 @@
                 android:id="@+id/spn_semestre_m"
                 android:layout_width="218dp"
                 android:layout_height="66dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="74dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_num_telefono_m" />
 
@@ -134,10 +122,22 @@
                 android:id="@+id/spn_carrera_m"
                 android:layout_width="218dp"
                 android:layout_height="66dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginEnd="74dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spn_semestre_m" />
+
+            <EditText
+                android:id="@+id/txt_edad_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="84dp"
+                android:ems="10"
+                android:hint="edad"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_fecha_nac_m" />
 
             <Button
                 android:id="@+id/btn_modificar"
@@ -145,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="55dp"
+                android:onClick="modificarAlumno"
                 android:text="Modificar"
                 app:layout_constraintEnd_toStartOf="@+id/btn_cancelar_m"
                 app:layout_constraintTop_toBottomOf="@+id/spn_carrera_m" />
@@ -161,10 +162,10 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/lista_alumnos"
-                android:layout_width="377dp"
-                android:layout_height="419dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="1dp"
+                android:layout_width="388dp"
+                android:layout_height="408dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_modificar" />
 
