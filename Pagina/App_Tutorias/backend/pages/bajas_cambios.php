@@ -110,7 +110,7 @@
                     </td>
                 </tr>",
                 $fila['num_control'],
-                $fila['nombre'],
+                $fila['nombre_alumno'],
                 $fila['paterno'],
                 $fila['materno'],
                 $fila['fecha_nac'],
@@ -118,8 +118,8 @@
                 $fila['num_telefono'],
                 $fila['semestre'],
                 $fila['carrera'],
-                $fila['Num_Control'], // Para las funciones de los botones
-                $fila['Num_Control'], 
+                $fila['num_control'], // Para las funciones de los botones
+                $fila['num_control'], 
             );
         }
 
@@ -134,68 +134,69 @@
     <h2>Editar Alumno</h2>
     <form action="../controllers/procesar_edicion.php" method="POST" class="row g-3">
         <div class="col-12">
-                <label for="caja_num_control">Número de Control:</label>
-                <input type="text" class="form-control" id="caja_num_control" name="caja_num_control" placeholder="Ingrese solo números" onkeypress="validarSoloNumeros(event)" required>
-            </div>
+            <label for="edit_nombre">No. Control:</label>
+            <input type="text" class="form-control" id="caja_num_control" name="caja_num_control" readonly>
+        </div>
 
-            <div class="col-12">
-                <label for="caja_nombre">Nombre:</label>
-                <input type="text" class="form-control" id="caja_nombre" name="caja_nombre" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
-            </div>
+        <div class="col-12">
+            <label for="caja_nombre">Nombre:</label>
+            <input type="text" class="form-control" id="caja_nombre" name="caja_nombre" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
+        </div>
 
-            <div class="col-12">
-                <label for="caja_primer_ap">Primer Apellido:</label>
-                <input type="text" class="form-control" id="caja_primer_ap" name="caja_primer_ap" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
-            </div>
+        <div class="col-12">
+            <label for="caja_primer_ap">Primer Apellido:</label>
+            <input type="text" class="form-control" id="caja_primer_ap" name="caja_primer_ap" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
+        </div>
 
-            <div class="col-12">
-                <label for="caja_segundo_ap">Segundo Apellido:</label>
-                <input type="text" class="form-control" id="caja_segundo_ap" name="caja_segundo_ap" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
-            </div>
+        <div class="col-12">
+            <label for="caja_segundo_ap">Segundo Apellido:</label>
+            <input type="text" class="form-control" id="caja_segundo_ap" name="caja_segundo_ap" placeholder="Ingrese solo letras" onkeypress="validarSoloLetras(event)" required>
+        </div>
 
-            <div class="col-12">
-                <label for="fecha_nacimiento">Fecha Nacimiento:</label>
-                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" onchange="calcularEdad()" required>
-            </div>
+        <div class="col-12">
+            <label for="fecha_nacimiento">Fecha Nacimiento:</label>
+            <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" onchange="calcularEdad()" required>
+        </div>
 
-            <div class="col-12">
-                <label for="edad">Edad:</label>
-                <input type="text" class="form-control" id="edad" name="edad" placeholder="Edad calculada automáticamente" readonly required>
-            </div>
-            
-            <div class="col-12">
-                <label for="num_telefono">Numero de Telefono:</label>
-                <input type="text" class="form-control" id="num_telefono" name="num_telefono" placeholder="Ingrese solo números" onkeypress="validarSoloNumeros(event)" required>
-            </div>
+        <div class="col-12">
+            <label for="edad">Edad:</label>
+            <input type="text" class="form-control" id="edad" name="edad" placeholder="Edad calculada automáticamente" readonly required>
+        </div>
+        
+        <div class="col-12">
+            <label for="num_telefono">Numero de Telefono:</label>
+            <input type="text" class="form-control" id="num_telefono" name="num_telefono" placeholder="Ingrese solo números" onkeypress="validarSoloNumeros(event)" required>
+        </div>
 
-            <div class="col-12">
-                <label for="semestre">Semestre:</label>
-                <select class="form-control" id="semestre" name="semestre" required>
-                    <option value="" disabled selected>Seleccione un semestre</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
+        <div class="col-12">
+            <label for="semestre">Semestre:</label>
+            <select class="form-control" id="semestre" name="semestre" required>
+                <option value="" disabled selected>Seleccione un semestre</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
 
-            <div class="col-12">
-                <label for="carrera">carrera:</label>
-                <select class="form-control" id="carrera" name="carrera" required>
-                    <option value="" disabled selected>Seleccione una Carrera</option>
-                    <option value="ISC">ISC</option>
-                    <option value="IIA">IIA</option>
-                    <option value="IM">IM</option>
-                    <option value="LAE">LAE</option>
-                    <option value="LCP">LCP</option>
-                </select>
-            </div>
+        <div class="col-12">
+            <label for="carrera">carrera:</label>
+            <select class="form-control" id="carrera" name="carrera" required>
+                <option value="" disabled selected>Seleccione una Carrera</option>
+                <option value="ISC">ISC</option>
+                <option value="IIA">IIA</option>
+                <option value="IM">IM</option>
+                <option value="LAE">LAE</option>
+                <option value="LCP">LCP</option>
+            </select>
+        </div>
+
         <div class="col-12">
             <button type="submit" class="btn btn-primary" >Guardar Cambios</button>
         </div>
@@ -217,7 +218,7 @@
 
         if (alumno) {
             document.getElementById('caja_num_control').value = alumno.num_control;
-            document.getElementById('caja_nombre').value = alumno.nombre;
+            document.getElementById('caja_nombre').value = alumno.nombre_alumno;
             document.getElementById('caja_primer_ap').value = alumno.paterno;
             document.getElementById('caja_segundo_ap').value = alumno.materno;
             document.getElementById('fecha_nacimiento').value = alumno.fecha_nac;

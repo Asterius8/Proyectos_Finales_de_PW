@@ -107,7 +107,7 @@
                     <option value="ISC">ISC</option>
                     <option value="IIA">IIA</option>
                     <option value="IM">IM</option>
-                    <option value="LAE">LAE</option>
+                    <option value="LA">LA</option>
                     <option value="LCP">LCP</option>
                 </select>
             </div>
